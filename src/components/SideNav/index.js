@@ -12,12 +12,12 @@ const SideNav = (props) => {
   const menuItems = [
     {
       title: 'new Post',
-      link: '/dasboard/newPost',
+      link: '/newPost',
       faClass: 'fa-dashboard'
     },
     {
       title: 'All Posts',
-      link: '/dasboard/allpost',
+      link: '/allpost',
       faClass: 'fa-users', // Font awesome class
       count: 15 // Notification count
     }
@@ -26,12 +26,12 @@ const SideNav = (props) => {
   const menuItems2 = [
     {
       title: 'new Portfolio',
-      link: '/dasboard/newPorfolio',
+      link: '/newPorfolio',
       faClass: 'fa-phone'
     },
     {
       title: 'all Portfolio',
-      link: '/dasboard/allporfolio',
+      link: '/allporfolio',
       faClass: 'fa-money'
     }
   ];

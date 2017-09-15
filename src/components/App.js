@@ -1,7 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import Header from './Header/';
 import SideNav from './SideNav/';
-import Login from './Login/';
 
 class App extends Component {
   render() {
@@ -10,7 +9,6 @@ class App extends Component {
     return (
       <div className="container-fluid">
         <div className="row">
-{/*<Login />*/}
           <SideNav />
 
           <div className="col-md-10 pull-right">
