@@ -9,29 +9,29 @@ const SideNav = (props) => {
     customClass: PropTypes.string
   };
 
-  const menuItems = [
+  const postItems = [
     {
       title: 'new Post',
-      link: '/newPost',
+      link: '/dashboard/newpost',
       faClass: 'fa-dashboard'
     },
     {
       title: 'All Posts',
-      link: '/allpost',
-      faClass: 'fa-users', // Font awesome class
+      link: '/dashboard/allpost',
+      faClass: 'fa-money',
       count: 15 // Notification count
     }
   ];
 
-  const menuItems2 = [
+  const portfolioItems = [
     {
       title: 'new Portfolio',
-      link: '/newPorfolio',
-      faClass: 'fa-phone'
+      link: '/dashboard/newportfolio',
+      faClass: 'fa-money'
     },
     {
       title: 'all Portfolio',
-      link: '/allporfolio',
+      link: '/dashboard/allportfolio',
       faClass: 'fa-money'
     }
   ];
@@ -43,12 +43,12 @@ const SideNav = (props) => {
       </span>
 
       <Menu 
-        items={menuItems}
+        items={postItems}
         caption="Blog"
       />
 
       <Menu 
-        items={menuItems2}
+        items={portfolioItems}
         caption="Portfolio"
       />
 
