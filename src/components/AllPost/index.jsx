@@ -6,20 +6,43 @@ export default class AdminBlogList extends Component {
 
   render() {
     return (
-      <ul className="list-group">
-        <li className="list-group-item list-group-item-bold">
-          <span className="time text-center">create data</span>
-          <span className="time text-center">edit data</span>
-          <span className="title"> text in  blog title </span>
-        </li>
-        <li className="list-group-item clearffix">
-          <span className="time text-center"> 25 04 2017</span>
-          <span className="time text-center"> 25 04 2017</span>
-          <span className="title"> title</span>
-            <button className="icon btn btn-danger pull-right">remove</button>
-            <button className="icon btn btn-success pull-right">edit</button>
-        </li>
-      </ul>
+      <div className="row">
+        <ul className="list-group blogList">
+          <li className="list-group-item clearfix">
+              <div className="time border-right bold text-center">created date</div>
+              <div className="time border-right bold text-center">edit date</div>
+              <div className="col bold">Title Post</div>
+          </li>
+          <li className="list-group-item clearfix">
+              <div className="time border-right">12 05 2015</div>
+              <div className="time border-right">12 05 2017</div>
+              <div className="col">Tsome post title</div>
+              <div className="time pull-right">
+                <i className="fa fa-pencil green" />
+                <i className="fa fa-times-circle-o red" />
+              </div>
+          </li>
+          <li className="list-group-item clearfix">
+            <div className="time border-right">12 05 2015</div>
+            <div className="time border-right">12 05 2017</div>
+            <div className="col">Tsome post title</div>
+            <div className="time pull-right">
+              <i className="fa fa-pencil green" />
+              <i className="fa fa-times-circle-o red" />
+            </div>
+          </li>
+          <li className="list-group-item clearfix">
+            <div className="time border-right">12 05 2015</div>
+            <div className="time border-right">12 05 2017</div>
+            <div className="col">Tsome post title</div>
+            <div className="time pull-right">
+              <i className="fa fa-pencil green" />
+              <i className="fa fa-times-circle-o red" />
+            </div>
+          </li>
+        </ul>
+      </div>
+
     );
   }
 }

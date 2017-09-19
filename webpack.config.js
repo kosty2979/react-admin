@@ -51,6 +51,6 @@ module.exports = {
   devtool: process.env.NODE_ENV === 'development' ? 'source-map' : null,
   devServer: {
     headers: { 'Access-Control-Allow-Origin': '*' },
-    // historyApiFallback: true
+    historyApiFallback: true
   }
 };

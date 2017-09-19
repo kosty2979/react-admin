@@ -1,0 +1,36 @@
+.blogList{
+  .col{
+    display:inline-block;
+  }
+  .time{
+    display:inline-block;
+    width: 10%;
+  }
+  .fa{
+    font-size: 22px;
+    padding-right: 8px;
+    cursor: pointer;
+    &.green{
+      color: #3a8f40;
+      &:hover{
+        color: #22e831;
+      }
+    }
+    &.red{
+      color: #8f3830;
+      &:hover{
+        color: #ca2c24;
+      }
+    }
+  }
+  .border-right{
+    border-right: 1px solid lightgrey;
+  }
+  .bold{
+    font-weight: bold;
+  }
+  .list-group,
+  .list-group-item{
+   // padding:0;
+  }
+}

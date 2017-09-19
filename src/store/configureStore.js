@@ -1,8 +1,10 @@
-import storeProd from './configureStore.prod';
-import storeDev from './configureStore.dev';
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
 
-if (process.env.NODE_ENV === 'production') {
-  module.exports = storeProd;
-} else {
-  module.exports = storeDev;
-}
+import rootReducer from '../reducers';
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; //eslint-disable-line
+export default createStore(
+  rootReducer,
+  composeEnhancers(applyMiddleware(thunk)),
+);

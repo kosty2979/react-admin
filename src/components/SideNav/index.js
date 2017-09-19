@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import cx from 'classnames';
 import Menu from '../Menu';
+import ActionBar from '../ActionBar';
+import LogoutButton from '../LogoutButton';
 
 import './sidenav.scss';
 
@@ -51,7 +53,9 @@ const SideNav = (props) => {
         items={portfolioItems}
         caption="Portfolio"
       />
-
+      <ActionBar>
+        <LogoutButton />
+      </ActionBar>
     </nav>
   );
 };
