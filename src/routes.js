@@ -8,20 +8,9 @@ import Login from './containers/Login/';
 import AllPost from './components/AllPost';
 import NewPost from './components/NewPost';
 import AllPortfolio from './components/AllPortfolio';
+import NewPortfolio from './components/NewPorfolio';
 import NotFoundPage from './components/NotFoundPage.js';
 
-// export default (
-//   <Route path="/" component={App}>
-//     <IndexRoute title="Login" component={Login} />
-//     <Route path="/dashboard" component={Dashboard} onEnter={Dashboard.onEnter.bind(this, store)}>
-//       <IndexRoute title="All Posts" component={AllPost} />
-//       <Route path="allpost" title="All Posts" component={AllPost} />
-//       <Route path="newpost" title="New Post" component={NewPost} />
-//       <Route path="allportfolio" title="All Portfolio" component={AllPortfolio} />
-//       <Route path="*" title="Page not found" component={NotFoundPage} />
-//     </Route>
-//   </Route>
-// );
 
 export function getRoutes(store) {
   return (
@@ -32,6 +21,7 @@ export function getRoutes(store) {
         <Route path="allpost" title="All Posts" component={AllPost} />
         <Route path="newpost" title="New Post" component={NewPost} />
         <Route path="allportfolio" title="All Portfolio" component={AllPortfolio} />
+        <Route path="newportfolio" title="New Portfolio" component={NewPortfolio} />
         <Route path="*" title="Page not found" component={NotFoundPage} />
       </Route>
     </Route>

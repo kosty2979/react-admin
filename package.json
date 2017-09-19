@@ -39,6 +39,7 @@
     "react": "^15.3.1",
     "react-bootstrap": "^0.30.10",
     "react-bootstrap-button-loader": "^1.0.7",
+    "react-color": "^2.13.8",
     "react-dom": "^15.3.1",
     "react-notify-toast": "^0.3.2",
     "react-quill": "^1.1.0",
