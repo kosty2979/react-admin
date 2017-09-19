@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
+import Notifications, { notify } from 'react-notify-toast';
 
 import { loginSend, loginCheck } from '../../actions/login.js';
 import './Login.scss';
@@ -12,13 +13,16 @@ class Login extends Component {
     password: ''
   };
 
-
   componentWillMount() {
     this.props.dispatch(loginCheck());
     if (this.props.data) this.redirectToDashboard();
   }
 
   componentWillReceiveProps(nextProps) {
+    if (nextProps.error) {
+      notify.show(nextProps.error.msg, 'error', 5000);
+      this.clearForm();
+    }
     if (nextProps.data) this.redirectToDashboard();
   }
 
@@ -40,7 +44,17 @@ class Login extends Component {
     });
   };
 
-  submitLoginData = () => {
+  clearForm() {
+    this.setState({
+      login: ''
+    });
+    this.setState({
+      password: ''
+    });
+  }
+
+  submitLoginData = (e) => {
+    e.preventDefault();
     const { login, password } = this.state;
     this.props.dispatch(loginSend({ login, password }));
   };
@@ -50,7 +64,8 @@ class Login extends Component {
       <div className="container">
         <div className="row loginWrapper">
           <div className="col-md-4 col-xs-10">
-            <div className="well clearfix">
+            <Notifications />
+            <form className="well clearfix">
               <h1>Login</h1>
               <p className="text-muted">Sign In to your account</p>
               <div className="form-group">
@@ -73,7 +88,7 @@ class Login extends Component {
               </div>
               <div className="form-group">
                 <button
-                  type="button"
+                  type="submit"
                   className="btn btn-primary pull-right"
                   onClick={this.submitLoginData}
                   disabled={this.checkField()}
@@ -81,7 +96,7 @@ class Login extends Component {
                   Login
                 </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
