@@ -12,13 +12,13 @@ class Dashboard extends Component {
 
   static onEnter(store, nextState, replace) {
     const user = store.getState().user;
-    if (!user.data) {
-      replace('/');
-    }
+    // if (!user.data) {
+    //   replace('/');
+    // }
   }
 
   componentWillReceiveProps(nextProps) {
-    if (!nextProps.data) this.redirectToLogin();
+    //if (!nextProps.data) this.redirectToLogin();
   }
 
   redirectToLogin = () => {
