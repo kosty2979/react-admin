@@ -4,7 +4,7 @@
   "description": "openGeeksLab adminsite",
   "main": "index.js",
   "scripts": {
-    "devserver": "NODE_ENV='development' webpack-dev-server --debug --hot --devtool eval-source-map --output-pathinfo --watch --colors --inline --content-base public --port 8081 --host 0.0.0.0",
+    "devserver": "NODE_ENV='development' webpack-dev-server --debug --hot --devtool eval-source-map --output-pathinfo --watch --colors --inline --content-base public --port 8081 --host localhost",
     "build": "NODE_ENV=production webpack --progress --color -p --config webpack.config.js"
   },
   "repository": {
@@ -60,6 +60,7 @@
     "eslint-plugin-react": "^6.1.2",
     "file-loader": "^0.9.0",
     "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^3.2.0",
     "json-loader": "^0.5.4",
     "react-hot-loader": "^1.3.0",
     "style-loader": "^0.13.1",

@@ -10,10 +10,10 @@ class NewPortfolio extends Component {
   render() {
     return (
       <div>
-        <label>
+        <div>
           select background color
           <SketchPicker />
-        </label>
+        </div>
         
       </div>
     );

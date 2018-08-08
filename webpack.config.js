@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const plugins = [
   new webpack.DefinePlugin({
@@ -9,7 +10,8 @@ const plugins = [
       NODE_ENV: JSON.stringify( process.env.NODE_ENV || 'development')
     }
   }),
-  new ExtractTextPlugin('bundle.css')
+  new ExtractTextPlugin('bundle.css'),
+  new HtmlWebpackPlugin({template:'src/index.html'})
 ];
 
 if (process.env.NODE_ENV !== 'development') {
